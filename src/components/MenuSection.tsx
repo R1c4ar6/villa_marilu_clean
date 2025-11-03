@@ -34,7 +34,7 @@ export function MenuSection() {
     {
       category: 'menu.desserts',
       dishes: [
-        { id: 'tres', nameKey: 'dish.tres.name', descKey: 'dish.tres.desc', image: tresImg, price: '$7' },
+        { id: 'tres', nameKey: 'dish.tresleches.name', descKey: 'dish.tresleches.desc', image: tresImg, price: '$7' },
       ],
     },
   ];
@@ -81,7 +81,7 @@ export function MenuSection() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <p className="text-foreground/80 mb-6">
             {t('menu.footer')}
           </p>
@@ -91,7 +91,7 @@ export function MenuSection() {
           >
             {t('contact.form.submit')}
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );

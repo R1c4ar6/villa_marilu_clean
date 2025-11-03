@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { X } from 'lucide-react';
-import { cn } from '@/lib/utils';
 
 import heroImg from "@assets/images/Hero_restaurant_exterior_sunset_54f2cf3e.png";
 import interiorImg from "@assets/images/Cozy_restaurant_interior_dining_b1959f29.png";

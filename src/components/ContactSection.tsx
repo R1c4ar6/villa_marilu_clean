@@ -25,9 +25,9 @@ export function ContactSection() {
                   <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-lg mb-2">{t('contact.address')}</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    {/* <p className="text-muted-foreground leading-relaxed">
                       {t('contact.addressLine')}
-                    </p>
+                    </p> */}
                     <div className="mt-4">
                       <a 
                         href="https://maps.google.com" 
@@ -48,19 +48,10 @@ export function ContactSection() {
                 <div className="flex items-start gap-4">
                   <Clock className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-lg mb-2">Hours</h3>
+                    <h3 className="font-semibold text-lg mb-2">{t('contact.hours.title')}</h3>
                     <div className="space-y-2 text-muted-foreground">
                       <p className="flex justify-between">
-                        <span>Monday - Thursday</span>
-                        <span>11:00 AM - 9:00 PM</span>
-                      </p>
-                      <p className="flex justify-between">
-                        <span>Friday - Saturday</span>
-                        <span>11:00 AM - 10:00 PM</span>
-                      </p>
-                      <p className="flex justify-between">
-                        <span>Sunday</span>
-                        <span>12:00 PM - 8:00 PM</span>
+                        {t('contact.hours')}
                       </p>
                     </div>
                   </div>
@@ -74,10 +65,6 @@ export function ContactSection() {
                   <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-lg mb-2">{t('contact.phone')}</h3>
-                    <p className="text-muted-foreground">+507 6123-4567</p>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      {t('contact.phoneHours')}
-                    </p>
                   </div>
                 </div>
               </CardContent>
@@ -89,76 +76,12 @@ export function ContactSection() {
                   <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-lg mb-2">{t('contact.email')}</h3>
-                    <a 
-                      href="mailto:info@villamarilu.pa" 
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      info@villamarilu.pa
-                    </a>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      {t('contact.emailResponse')}
-                    </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
           </div>
 
-          <div className="bg-card rounded-lg p-6 shadow-lg">
-            <h3 className="text-2xl font-bold mb-6">Send us a message</h3>
-            <form className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-1">
-                  {t('contact.form.name')}
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                  placeholder={t('contact.form.namePlaceholder')}
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-1">
-                  {t('contact.form.email')}
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                  placeholder={t('contact.form.emailPlaceholder')}
-                />
-              </div>
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-1">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                  placeholder="How can we help you?"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-1">
-                  {t('contact.form.message')}
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                  placeholder={t('contact.form.messagePlaceholder')}
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-primary text-white py-3 px-6 rounded-md hover:bg-primary/90 transition-colors font-medium"
-              >
-                {t('contact.form.submit')}
-              </button>
-            </form>
-          </div>
         </div>
       </div>
     </section>
