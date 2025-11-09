@@ -18,34 +18,33 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Contact</h4>
+            <h4 className="font-semibold text-foreground mb-4">{t('footer.contact')}</h4>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                 <p className="text-sm text-muted-foreground">
-                  {t('contact.addressLine')}
+                  {t('contact.address')}
                 </p>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-primary" />
                 <a href="tel:+50761234567" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  +507 6123-4567
+                  {t('contact.phone')}
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary" />
                 <a href="mailto:info@villamarilu.pa" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  info@villamarilu.pa
+                  {t('contact.email')}
                 </a>
               </div>
             </div>
           </div>
 
           <div>
-            <h4 className="font-semibold text-foreground mb-4">{t('footer.hours')}</h4>
+            <h4 className="font-semibold text-foreground mb-4">{t('contact.hours.title')}</h4>
             <div className="text-sm text-muted-foreground space-y-2">
-              <p>{t('footer.hoursDays')}</p>
-              <p>{t('footer.hoursTime')}</p>
+              <p>{t('contact.hours')}</p>
               <p className="text-destructive font-semibold">{t('footer.closedMonday')}</p>
             </div>
           </div>
@@ -82,7 +81,7 @@ export function Footer() {
             </a>
           </div>
           <div className="text-sm text-muted-foreground text-center md:text-right">
-            <p>{`© ${new Date().getFullYear()} ${t('footer.copyright')}`}</p>
+            <p>{t('footer.copyright')}</p>
             <div className="flex justify-center md:justify-end space-x-4 mt-2 text-xs">
               <a href="#" className="hover:text-primary transition-colors">
                 {t('footer.privacy')}

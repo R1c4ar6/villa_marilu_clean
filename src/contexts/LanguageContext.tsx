@@ -96,11 +96,16 @@ const translations: Record<Language, StringMap> = {
     "contact.form.submit": "Send Message",
     "contact.success":
       "Thank you for your message! We'll get back to you soon.",
+    "contact.closeModal": "Close",
+    "contact.map": "View on map →",
 
     // Footer
     "footer.copyright": "© {year} Villa Marilú. All rights reserved.",
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms of Service",
+    "footer.aboutText": "Experience the warmth of the countryside with traditional flavors passed down through generations. 'La Lula' is in charge of every single plate that your palate will taste.",
+    "footer.closedMonday": "We're closed on Mondays.",
+    "footer.contact": "Contact",
   },
   es: {
     // Navigation
@@ -179,11 +184,18 @@ const translations: Record<Language, StringMap> = {
     "contact.form.submit": "Enviar Mensaje",
     "contact.success":
       "¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.",
+    "contact.closeModal": "Cerrar",
+    "contact.map": "Ver en mapa →",
 
     // Footer
     "footer.copyright": "© {year} Villa Marilú. Todos los derechos reservados.",
     "footer.privacy": "Política de Privacidad",
     "footer.terms": "Términos de Servicio",
+    "footer.aboutText": "Experimenta la calidez de la campiña con sus sabores tradicionales pasados de generación en generación, 'La Lula' está personalmente encargada de cada plato que que llegue a tu mesa.",
+    "footer.closedMonday": "Villa Marilú se encuentra cerrada los lunes.",
+    "footer.contact": "Contacto",
+
+    // Errors
   },
 };
 
@@ -195,7 +207,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>("en");
 
   // Debug log
-  console.log("LanguageProvider initialized with language:", language);
+  // console.log("LanguageProvider initialized with language:", language);
 
   useEffect(() => {
     // Try to get language preference from localStorage
@@ -217,7 +229,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const t = (key: string): string => {
     // Debug log
-    console.log(`Translating key: ${key} for language: ${language}`);
+    // console.log(`Translating key: ${key} for language: ${language}`);
 
     // Get the translations for the current language
     const langTranslations = translations[language];
@@ -238,7 +250,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       if (current && typeof current === "object" && k in current) {
         current = current[k];
       } else {
-        console.warn(`Translation key not found: ${key}`);
+        // console.warn(`Translation key not found: ${key}`);
         return key; // Return the key as fallback
       }
     }

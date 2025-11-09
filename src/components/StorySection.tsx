@@ -2,8 +2,17 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import interiorImage from "@assets/images/Cozy_restaurant_interior_dining_b1959f29.png";
 import exteriorImage from "@assets/images/Restaurant_building_exterior_view_d7c8a734.png";
 
-export function StorySection() {
+interface StorySectionProps {
+  onOpenContact: () => void;
+}
+
+export function StorySection({ onOpenContact }: StorySectionProps) {
   const { t } = useLanguage();
+
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    onOpenContact();
+  };
 
   return (
     <section id="story" className="py-16 md:py-24 lg:py-32 bg-background">
@@ -48,12 +57,12 @@ export function StorySection() {
               {t('story.p3')}
             </p>
             <div className="pt-4">
-              <a 
-                href="#contact" 
-                className="inline-flex items-center text-primary hover:underline font-medium"
+              <button 
+                onClick={handleContactClick}
+                className="inline-flex items-center text-primary hover:underline font-medium transition-colors"
               >
                 {t('contact.title')} →
-              </a>
+              </button>
             </div>
           </div>
         </div>

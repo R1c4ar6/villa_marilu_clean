@@ -36,7 +36,7 @@ export function Navigation() {
     { key: 'nav.story', id: 'story' },
     { key: 'nav.menu', id: 'menu' },
     { key: 'nav.gallery', id: 'gallery' },
-    { key: 'nav.contact', id: 'contact' },
+    // { key: 'nav.contact', id: 'contact' }, REPLACED BY MODAL
   ];
 
   return (
