@@ -191,7 +191,7 @@ const translations: Record<Language, StringMap> = {
     "footer.copyright": "© {year} Villa Marilú. Todos los derechos reservados.",
     "footer.privacy": "Política de Privacidad",
     "footer.terms": "Términos de Servicio",
-    "footer.aboutText": "Experimenta la calidez de la campiña con sus sabores tradicionales pasados de generación en generación, 'La Lula' está personalmente encargada de cada plato que que llegue a tu mesa.",
+    "footer.aboutText": "Experimenta la calidez de la campiña con sus sabores tradicionales pasados de generación en generación, 'La Lula' está personalmente encargada de cada plato que llegue a tu mesa.",
     "footer.closedMonday": "Villa Marilú se encuentra cerrada los lunes.",
     "footer.contact": "Contacto",
 
